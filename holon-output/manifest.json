@@ -1,0 +1,28 @@
+{
+  "metadata": {
+    "agent": "claude-code",
+    "version": "0.10.0",
+    "mode": "solve",
+    "engine": {
+      "sdk": "@anthropic-ai/claude-agent-sdk",
+      "sdkVersion": "0.1.75"
+    }
+  },
+  "status": "completed",
+  "outcome": "success",
+  "duration": "112.5s",
+  "artifacts": [
+    {
+      "name": "diff.patch",
+      "path": "diff.patch"
+    },
+    {
+      "name": "summary.md",
+      "path": "summary.md"
+    },
+    {
+      "name": "evidence",
+      "path": "evidence/"
+    }
+  ]
+}

@@ -15,9 +15,9 @@ func (c *Calculator) Subtract(a, b int) int {
 	return a - b
 }
 
-// Multiply 乘法 - 这里有 bug
+// Multiply 乘法
 func (c *Calculator) Multiply(a, b int) int {
-	return a + b // BUG: 应该是 a * b
+	return a * b
 }
 
 // Divide 除法

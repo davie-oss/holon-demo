@@ -1,0 +1,16 @@
+diff --git a/main.go b/main.go
+index 920829709d834ad11ae4a3aa834a0e75b0bd0be5..4c1a673f2a931320f97890c2160a8600b532417d 100755
+--- a/main.go
++++ b/main.go
+@@ -15,9 +15,9 @@ func (c *Calculator) Subtract(a, b int) int {
+ 	return a - b
+ }
+ 
+-// Multiply 乘法 - 这里有 bug
++// Multiply 乘法
+ func (c *Calculator) Multiply(a, b int) int {
+-	return a + b // BUG: 应该是 a * b
++	return a * b
+ }
+ 
+ // Divide 除法
