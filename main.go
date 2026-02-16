@@ -17,7 +17,7 @@ func (c *Calculator) Subtract(a, b int) int {
 
 // Multiply 乘法
 func (c *Calculator) Multiply(a, b int) int {
-	return a * b
+	return a + b // BUG: 应该是 a * b
 }
 
 // Divide 除法
@@ -28,12 +28,22 @@ func (c *Calculator) Divide(a, b int) int {
 	return a / b
 }
 
+// Power 幂运算 - 新功能有 bug
+func (c *Calculator) Power(base, exponent int) int {
+	result := 1
+	for i := 0; i < exponent; i++ {
+		result = result + base // BUG: 应该是 result *= base
+	}
+	return result
+}
+
 func main() {
 	calc := &Calculator{}
 
 	fmt.Println("=== 计算器测试 ===")
 	fmt.Printf("2 + 3 = %d\n", calc.Add(2, 3))
 	fmt.Printf("5 - 2 = %d\n", calc.Subtract(5, 2))
-	fmt.Printf("3 * 4 = %d (期望 12)\n", calc.Multiply(3, 4)) // Bug: 会输出 7
+	fmt.Printf("3 * 4 = %d (期望 12)\n", calc.Multiply(3, 4))
 	fmt.Printf("10 / 2 = %d\n", calc.Divide(10, 2))
+	fmt.Printf("2 ^ 3 = %d (期望 8)\n", calc.Power(2, 3))
 }

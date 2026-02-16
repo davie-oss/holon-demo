@@ -33,3 +33,11 @@ func TestDivide(t *testing.T) {
 		t.Errorf("Divide(10, 2) = %d; want 5", result)
 	}
 }
+
+func TestPower(t *testing.T) {
+	calc := &Calculator{}
+	result := calc.Power(2, 3)
+	if result != 8 {
+		t.Errorf("Power(2, 3) = %d; want 8", result)
+	}
+}

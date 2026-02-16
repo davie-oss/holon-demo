@@ -1,8 +1,0 @@
-{
-  "strategy": "git-clone",
-  "source": "/tmp/demo-project",
-  "head_sha": "0a9452089103548799e457af35deb8973fc132a7",
-  "created_at": "2026-02-17T01:48:45.179846434+08:00",
-  "has_history": true,
-  "is_shallow": false
-}
