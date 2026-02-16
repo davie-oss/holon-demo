@@ -17,7 +17,7 @@ func (c *Calculator) Subtract(a, b int) int {
 
 // Multiply 乘法
 func (c *Calculator) Multiply(a, b int) int {
-	return a + b // BUG: 应该是 a * b
+	return a * b
 }
 
 // Divide 除法
@@ -28,11 +28,11 @@ func (c *Calculator) Divide(a, b int) int {
 	return a / b
 }
 
-// Power 幂运算 - 新功能有 bug
+// Power 幂运算
 func (c *Calculator) Power(base, exponent int) int {
 	result := 1
 	for i := 0; i < exponent; i++ {
-		result = result + base // BUG: 应该是 result *= base
+		result *= base
 	}
 	return result
 }
