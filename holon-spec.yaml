@@ -1,0 +1,25 @@
+# Holon 任务规范
+# 目标：修复 Calculator.Multiply 函数的 bug
+
+apiVersion: holon.run/v1
+kind: HolonSpec
+metadata:
+  name: fix-multiply-bug
+  description: |
+    修复 Calculator.Multiply 方法的 bug。
+    当前实现使用了加法而不是乘法。
+
+spec:
+  goal: |
+    修复 main.go 中 Calculator.Multiply 方法的 bug。
+    当前代码错误地使用了 a + b，应该改为 a * b。
+    确保测试通过。
+
+  context:
+    - main.go 包含 Calculator 结构体
+    - main_test.go 包含测试用例
+    - 测试 TestMultiply 当前会失败
+
+  acceptance:
+    - 运行 go test ./... 必须全部通过
+    - Multiply(3, 4) 应该返回 12
